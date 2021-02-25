@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dsc-coea</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+        </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+    <div id="contentcolumn">
+        <div id="rightcolumn">
+            <div class="innertext">
+                <h2>Linked list implementation of stack
+                </h2><br><br>
+                Instead of using array, we can also use linked list to implement stack. Linked list allocates the memory
+                dynamically. However, time complexity in both the scenario is same for all the operations i.e. push, pop
+                and peek.
+                <br><br>
+                In linked list implementation of stack, the nodes are maintained non-contiguously in the memory. Each
+                node contains a pointer to its immediate successor node in the stack. Stack is said to be overflown if
+                the space left in the memory heap is not enough to create a node.
+                <br><br>
+
+                <img src="ds-linked-list-implementation-stack.png" width="300px" height="300px"><br><br>
+                The top most node in the stack always contains null in its address field. Lets discuss the way in which,
+                each operation is performed in linked list implementation of stack.
+                <br><br>
+                <h2>Adding a node to the stack (Push operation)
+                </h2><br><br>
+                Adding a node to the stack is referred to as push operation. Pushing an element to a stack in linked
+                list implementation is different from that of an array implementation. In order to push an element onto
+                the stack, the following steps are involved.
+                <br><br>
+                <ul>
+                    <li>1.Create a node first and allocate memory to it.
+                    </li><br>
+                    <li>2.If the list is empty then the item is to be pushed as the start node of the list. This
+                        includes assigning value to the data part of the node and assign null to the address part of the
+                        node.
+                    </li><br>
+                    <li>3.If there are some nodes in the list already, then we have to add the new element in the
+                        beginning of the list (to not violate the property of the stack). For this purpose, assign the
+                        address of the starting element to the address field of the new node and make the new node, the
+                        starting node of the list.
+                    </li><br>
+                </ul>
+                <b>Time Complexity : o(1)</b><br><br>
+                <img src="ds-linked-list-implementation-stack2.png" width="600px" height="600px"><br><br>
+
+                <h2>C implementation :
+                </h2><br><br>
+                <div class="box">
+                    void push ()<br>
+                    {<br>
+                    int val;<br>
+                    struct node *ptr =(struct node*)malloc(sizeof(struct node));<br>
+                    if(ptr == NULL)<br>
+                    {<br>
+                    printf("not able to push the element");<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                    printf("Enter the value");<br>
+                    scanf("%d",&val);<br>
+                    if(head==NULL)<br>
+                    {<br>
+                    ptr->val = val;<br>
+                    ptr -> next = NULL;<br>
+                    head=ptr;<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                    ptr->val = val;<br>
+                    ptr->next = head;<br>
+                    head=ptr;<br>
+                    <br>
+                    }<br>
+                    printf("Item pushed");<br>
+
+                    }<br>
+                    }<br>
+                </div>
+                <h>Deleting a node from the stack (POP operation)
+                </h><br><br>
+                Deleting a node from the top of stack is referred to as pop operation. Deleting a node from the linked
+                list implementation of stack is different from that in the array implementation. In order to pop an
+                element from the stack, we need to follow the following steps :
+                <br><br>
+                <u>
+                    <li><b>1.Check for the underflow condition: </b>The underflow condition occurs when we try to pop
+                        from an already empty stack. The stack will be empty if the head pointer of the list points to
+                        null.
+                    </li><br>
+                    <li><b>2.Adjust the head pointer accordingly:</b> In stack, the elements are popped only from one
+                        end, therefore, the value stored in the head pointer must be deleted and the node must be freed.
+                        The next node of the head node now becomes the head node.
+                    </li><br>
+                </u>
+                <b>Time Complexity : o(n)</b><br><br>
+                <h2>C implementation
+                </h2><br>
+                <br>
+                <div class="box">
+                    void pop()<br>
+                    {<br>
+                    int item;<br>
+                    struct node *ptr;<br>
+                    if (head == NULL)<br>
+                    {<br>
+                    printf("Underflow");<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                    item = head->val;<br>
+                    ptr = head;<br>
+                    head = head->next;<br>
+                    free(ptr);<br>
+                    printf("Item popped");<br>
+                    <br>
+                    }<br>
+                    }<br>
+                </div>
+                <h2>Display the nodes (Traversing)
+                </h2><br><br>
+                Displaying all the nodes of a stack needs traversing all the nodes of the linked list organized in the
+                form of stack. For this purpose, we need to follow the following steps.
+                <br><br>
+                <ul>
+                    <li>1.Copy the head pointer into a temporary pointer.</li><br>
+                    <li>2.Move the temporary pointer through all the nodes of the list and print the value field
+                        attached to every node.
+                    </li><br>
+                </ul>
+                <b>Time Complexity : o(n)
+                </b><br><br>
+                <h2>C Implementation
+                </h2><br>
+                <div class="box">
+                    void display()<br>
+                    {<br>
+                    int i;<br>
+                    struct node *ptr;<br>
+                    ptr=head;<br>
+                    if(ptr == NULL)<br>
+                    {<br>
+                    printf("Stack is empty\n");<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                    printf("Printing Stack elements \n");<br>
+                    while(ptr!=NULL)<br>
+                    {<br>
+                    printf("%d\n",ptr->val);<br>
+                    ptr = ptr->next;<br>
+                    }<br>
+                    }<br>
+                    }<br>
+                </div>
+
+
+
+            </div>
+            <button class="button button2">
+                <a href="stack.html">PREV</a></button>
+            <button class=" button button1">
+                <a href="ds-queue.html">NEXT</a></button>
+
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h3>About DSC</h3>
+                    <p>codesyouth is platform used for Multinational company recruitment process and
+                        brief history about that and also about<br>seminar topic for computer science
+                        student.Codesyouth is a project developing<br>under Developer student club.</p>
+                </div>
+                <div class="footer-items">
+                    <h3>NOTS</h3>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/java-tutorial">java</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h3>Contact Us</h3>
+                    <div class="border"></div>
+                    <a href="https://www.facebook.com/javatpoint">
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <img src="facebook.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.javatpoint.com/instagram-algorithm">
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        <img src="instagram.webp" width="35px" height="35px">
+                    </a>
+                    <a href="https://twitter.com/pagejavatpoint">
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <img src="twitter.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg">
+                        <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                        <img src="youtube.png" width="35px" height="35px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Copyright@codesyouth 2020. All rights reserved.
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

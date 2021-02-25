@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dsc-coea</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+        </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+
+    <div id="contentcolumn">
+        <div id="rightcolumn">
+            <div class="innertext">
+                <h2>Skip list in Data structure
+                </h2><br><br>
+                <h3>What is a skip list?</h3><br><br>
+                A skip list is a probabilistic data structure. The skip list is used to store a sorted list of elements
+                or data with a linked list. It allows the process of the elements or data to view efficiently. In one
+                single step, it skips several elements of the entire list, which is why it is known as a skip list.
+                <br><br>
+                The skip list is an extended version of the linked list. It allows the user to search, remove, and
+                insert the element very quickly. It consists of a base list that includes a set of elements which
+                maintains the link hierarchy of the subsequent elements.
+                <br><br>
+                <h2>Complexity table of the Skip list
+                </h2><br><br>
+                <table>
+                    <tr>
+                        <th>S. No</th>
+                        <th>Complexity</th>
+                        <th>Average case</th>
+                        <th>Worst case</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Access complexity</td>
+                        <td>O(logn)</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Search complexity</td>
+                        <td>O(logn)</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Delete complexity</td>
+                        <td>O(logn)</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Insert complexity</td>
+                        <td>O(logn)</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Space complexity</td>
+                        <td>-</td>
+                        <td>O(nlogn)</td>
+                    </tr>
+                </table>
+                <br><br>
+                <h2>Skip List Basic Operations
+                </h2><br><br>
+                <ul>
+                    <li><b>Insertion operation:</b> It is used to add a new node to a particular location in a specific
+                        situation. </li><br>
+                    <li><b>Deletion operation:</b> It is used to delete a node in a specific situation.</li><br>
+                    <li><b>Search Operation:</b> The search operation is used to search a particular node in a skip
+                        list.</li><br>
+                </ul>
+                <br>
+                <b>Algorithm of the insertion operation</b><br><br>
+                <div class="box">
+                    Insertion (L, Key) <br>
+                    local update [0...Max_Level + 1]<br>
+                    a = L → header<br>
+                    for i = L → level down to 0 do.<br>
+                    while a → forward[i] → key forward[i]<br>
+                    update[i] = a<br>
+                    <br>
+                    a = a → forward[0]<br>
+                    lvl = random_Level()<br>
+                    if lvl > L → level then<br>
+                    for i = L → level + 1 to lvl do<br>
+                    update[i] = L → header<br>
+                    L → level = lvl<br>
+                    <br>
+                    a = makeNode(lvl, Key, value)<br>
+                    for i = 0 to level do<br>
+                    a → forward[i] = update[i] → forward[i]<br>
+                    update[i] → forward[i] = a<br>
+
+                </div>
+                <b>Algorithm of deletion operation</b><br><br>
+                <div class="box">
+                    Deletion (L, Key)<br>
+                    local update [0... Max_Level + 1]<br>
+                    a = L → header<br>
+                    for i = L → level down to 0 do.<br>
+                    while a → forward[i] → key forward[i]<br>
+                    update[i] = a<br>
+                    a = a → forward[0]<br>
+                    if a → key = Key then<br>
+                    for i = 0 to L → level do<br>
+                    if update[i] → forward[i] ? a then break<br>
+                    update[i] → forward[i] = a → forward[i]<br>
+                    free(a)<br>
+                    while L → level > 0 and L → header → forward[L → level] = NIL do<br>
+                    L → level = L → level - 1<br>
+                </div>
+                <br><br>
+                <b>Algorithm of searching operation</b><br><br>
+                <div class="box">
+                    Searching (L, SKey)<br>
+                    a = L → header<br>
+                    loop invariant: a → key level down to 0 do.<br>
+                    while a → forward[i] → key forward[i]<br>
+                    a = a → forward[0]<br>
+                    if a → key = SKey then return a → value<br>
+                    else return failure<br>
+                </div>
+                <div class="box-container">
+                    <b>Example 1:</b> Create a skip list, we want to insert these following keys in the empty skip
+                    list.<br><br>
+                    <ul>
+                        <li>1.6 with level 1.</li><br>
+                        <li> 2.29 with level 1.</li><br>
+                        <li> 3.22 with level 4.</li><br>
+                        <li> 4.9 with level 3.</li><br>
+                        <li>5. 17 with level 1.</li><br>
+                        <li>6.4 with level 2.</li><br>
+                    </ul>
+                    <b>Ans:</b>
+                    <br><br>
+                    <b>Step 1:</b> Insert 6 with level<br><br>
+                    <img src="skip-list-in-data-structure2.png" width="400px" height="200px"><br><br>
+                    <b>Step 2: </b> 29 with level 1<br><br>
+                    <img src="skip-list-in-data-structure3.png" width="400px" height="200px"><br><br>
+                    <b>Step 3:</b> Insert 22 with level 4<br><br>
+                    <img src="skip-list-in-data-structure4.png" width="400px" height="200px"><br><br>
+                    <b>Step 4: </b>Insert 9 with level 3<br><br>
+                    <img src="skip-list-in-data-structure5.png" width="400px" height="200px"><br><br>
+                    <b>Step 5: </b>Insert 17 with level 1<br><br>
+                    <img src="skip-list-in-data-structure6.png" width="400px" height="200px"><br><br>
+                    <b>Step 6:</b> Insert 4 with level 2
+                    <br><br>
+                    <img src="skip-list-in-data-structure7.png" width="400px" height="200px"><br><br>
+                </div>
+                    <h2>Advantages of the Skip list
+                    </h2><br><br>
+                    <ul>
+                        <li>1.If you want to insert a new node in the skip list, then it will insert the node very fast because there are no rotations in the skip list.
+                        </li><br>
+                        <li>2.The skip list is simple to implement as compared to the hash table and the binary search tree.
+                        </li><br>
+                        <li>3.It is very simple to find a node in the list because it stores the nodes in sorted form.
+                        </li><br>
+                        <li>4.The skip list algorithm can be modified very easily in a more specific structure, such as indexable skip lists, trees, or priority queues.
+                        </li><br>
+                        <li>The skip list is a robust and reliable list.
+                        </li><br>
+                    </ul>
+                    <h2>Disadvantages of the Skip list
+                    </h2><br><br>
+                    <ul>
+                        <li>1.It requires more memory than the balanced tree.
+                        </li><br>
+                        <li>2.Reverse searching is not allowed.
+                        </li><br>
+                        <li>3.The skip list searches the node much slower than the linked list.
+                        </li><br>
+
+
+                    </ul>
+                    <h2>Applications of the Skip list
+                    </h2><br><br>
+                    <ul>
+                        <li>1.It is used in distributed applications, and it represents the pointers and system in the distributed applications.
+                        </li><br>
+                        <li>2.It is used to implement a dynamic elastic concurrent queue with low lock contention.
+                        </li><br>
+                        <li>3.It is also used with the QMap template class.
+                        </li><br>
+                        <li>4.The indexing of the skip list is used in running median problems.
+                        </li><br>
+
+                        <li>5.The skip list is used for the delta-encoding posting in the Lucene search.
+                        </li><br>
+
+
+                    </ul>
+
+
+            
+            </div>
+            <button class="button button2">
+                <a href="circular-doubly.html">PREV</a></button>
+            <button class=" button button1">
+                <a href="stack.html">NEXT</a></button>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div id="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h3>About DSC</h3>
+                    <p>codesyouth is platform used for Multinational company recruitment process and
+                        brief history about that and also about<br>seminar topic for computer science
+                        student.Codesyouth is a project developing<br>under Developer student club.</p>
+                </div>
+                <div class="footer-items">
+                    <h3>NOTS</h3>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/java-tutorial">java</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h3>Contact Us</h3>
+                    <div class="border"></div>
+                    <a href="https://www.facebook.com/javatpoint">
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <img src="facebook.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.javatpoint.com/instagram-algorithm">
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        <img src="instagram.webp" width="35px" height="35px">
+                    </a>
+                    <a href="https://twitter.com/pagejavatpoint">
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <img src="twitter.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg">
+                        <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                        <img src="youtube.png" width="35px" height="35px">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            Copyright@codesyouth 2020. All rights reserved.
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

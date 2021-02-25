@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dsc-coea</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+        </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+
+    <div id="contentcolumn">
+        <div id="rightcolumn">
+            <div class="innertext">
+
+                <h2>Singly linked list or One way chain
+                </h2><br><br>
+                Singly linked list can be defined as the collection of ordered set of elements. The number of elements
+                may vary according to need of the program. A node in the singly linked list consist of two parts: data
+                part and link part. Data part of the node stores actual information that is to be represented by the
+                node while the link part of the node stores the address of its immediate successor.
+                <br>
+                One way chain or singly linked list can be traversed only in one direction. In other words, we can say
+                that each node contains only next pointer, therefore we can not traverse the list in the reverse
+                direction.
+                <br>
+                Consider an example where the marks obtained by the student in three subjects are stored in a linked
+                list as shown in the figure.
+                <br>
+                <img src="singly-link-list.png" width="600px" height="100px"><br><br>
+                In the above figure, the arrow represents the links. The data part of every node contains the marks
+                obtained by the student in the different subject. The last node in the list is identified by the null
+                pointer which is present in the address part of the last node. We can have as many elements we require,
+                in the data part of the list.
+                <br><br>
+                <h2>Complexity
+                </h2><br><br>
+
+
+
+                <table>
+                    <tr>
+                        <th>Data Structure</th>
+                        <th colspan="8">Time Complexity</th>
+                        <th>Space Compleity</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="4"><strong>Average</strong></td>
+                        <td colspan="4"><strong>Worst</strong></td>
+                        <td><strong>Worst</strong></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Access</td>
+                        <td>Search</td>
+                        <td>Insertion</td>
+                        <td>Deletion</td>
+                        <td>Access</td>
+                        <td>Search</td>
+                        <td>Insertion</td>
+                        <td>Deletion</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Singly Linked List</td>
+                        <td>&theta;(n)</td>
+                        <td>&theta;(n)</td>
+                        <td>&theta;(1)</td>
+                        <td>&theta;(1)</td>
+                        <td>O(n)</td>
+                        <td>O(n)</td>
+                        <td>O(1)</td>
+                        <td>O(1)</td>
+                        <td>O(n)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>Operations on Singly Linked List
+            </h2><br><br>
+            <h2>Node Creation
+            </h2><br><br>
+            <div class="box">
+                struct node<br>
+                {<br>
+                int data;<br>
+                struct node *next;<br>
+                };<br>
+                struct node *head, *ptr;<br>
+                ptr = (struct node *)malloc(sizeof(struct node *));<br>
+            </div>
+            <h2>Insertion
+            </h2><br><br>
+
+
+            <p>The insertion into a singly linked list can be performed at different positions. Based on the position of
+                the new node being inserted, the insertion is categorized into the following categories.</p>
+            <br><br>
+            <table>
+                <tr>
+                    <th>SN</th>
+                    <th>Operation</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="insertion-in-singly-linked-list-at-beginning">Insertion at beginning</a></td>
+                    <td>It involves inserting any element at the front of the list. We just need to a few link
+                        adjustments to make the new node as the head of the list. </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="insertion-in-singly-linked-list-at-end">Insertion at end of the list</a></td>
+                    <td>It involves insertion at the last of the linked list. The new node can be inserted as the only
+                        node in the list or it can be inserted as the last one. Different logics are implemented in each
+                        scenario. </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="insertion-in-singly-linked-list-after-specified-node">Insertion after specified
+                            node</a></td>
+                    <td>It involves insertion after the specified node of the linked list. We need to skip the desired
+                        number of nodes in order to reach the node after which the new node will be inserted. . </td>
+                </tr>
+            </table>
+            <h2>Deletion and Traversing</h2><br><br>
+            <p>The Deletion of a node from a singly linked list can be performed at different positions. Based on the
+                position of the node being deleted, the operation is categorized into the following categories.
+                <br><br>
+            <table>
+
+
+                <tr>
+                    <th>SN</th>
+                    <th>Operation</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="deletion-in-singly-linked-list-at-beginning">Deletion at beginning</a></td>
+                    <td>It involves deletion of a node from the beginning of the list. This is the simplest operation
+                        among all. It just need a few adjustments in the node pointers. </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="deletion-in-singly-linked-list-at-end">Deletion at the end of the list </a></td>
+                    <td>It involves deleting the last node of the list. The list can either be empty or full. Different
+                        logic is implemented for the different scenarios.
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="deletion-in-singly-linked-list-after-specified-node">Deletion after specified node</a>
+                    </td>
+                    <td>It involves deleting the node after the specified node in the list. we need to skip the desired
+                        number of nodes to reach the node after which the node will be deleted. This requires traversing
+                        through the list. </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="traversing-in-singly-linked-list">Traversing</a></td>
+                    <td>In traversing, we simply visit each node of the list at least once in order to perform some
+                        specific operation on it, for example, printing data part of each node present in the list.
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="searching-in-singly-linked-list">Searching </a></td>
+                    <td>In searching, we match each element of the list with the given element. If the element is found
+                        on any of the location then location of that element is returned otherwise null is returned. .
+                    </td>
+                </tr>
+            </table>
+            <br><br><br>
+            <h2>Linked List in C: Menu Driven Program
+            </h2><br><br>
+<b>Include header file</b>
+            <div class="box">
+                #include<stdio.h> <br>
+                    #include<stdlib.h> <br>
+                        struct node <br>
+                        { <br>
+                        int data; <br>
+                        struct node *next; <br>
+                        }; <br>
+                        struct node *head; <br>
+
+                        void beginsert (); <br>
+                        void lastinsert (); <br>
+                        void randominsert(); <br>
+                        void begin_delete(); <br>
+                        void last_delete(); <br>
+                        void random_delete(); <br>
+                        void display(); <br>
+                        void search(); <br>
+                        void main () <br>
+                        { <br>
+                        int choice =0; <br>
+                        while(choice != 9) <br>
+                        { <br><br>
+                        printf("\n\n*********Main Menu*********\n");<br>
+                        printf("\nChoose one option from the following list ...\n");<br>
+                        printf("\n==================================\n"); <br>
+                        printf("\n1.Insert in begining\n2.Insert at last\n3.Insert at any random location\n4.Delete from
+                        Beginning\n <br>
+                        5.Delete from last\n6.Delete node after specified location\n7.Search for an
+                        element\n8.Show\n9.Exit\n"); <br>
+                        printf("\nEnter your choice?\n"); <br>
+                        scanf("\n%d",&choice); <br>
+                        switch(choice) <br>
+                        { <br>
+                        case 1: <br>
+                        beginsert(); <br>
+                        break; <br>
+                        case 2: <br>
+                        lastinsert(); <br>
+                        break; <br>
+
+                        case 3: <br>
+                        randominsert(); <br>
+                        break; <br>
+                        case 4: <br>
+                        begin_delete(); <br>
+                        break; <br>
+                        case 5: <br>
+                        last_delete();<br>
+                        break; <br>
+                        case 6: <br>
+                        random_delete(); <br>
+                        break; <br>
+                        case 7: <br>
+                        search(); <br>
+                        break; <br>
+                        case 8: <br>
+                        display();<br>
+                        break; <br>
+                        case 9: <br>
+                        exit(0); <br>
+                        break; <br>
+                        default: <br>
+                        printf("Please enter valid choice.."); <br>
+                        } <br>
+                        } <br>
+                        } <br>
+                        void beginsert() <br>
+                        { <br><br>
+
+                        struct node *ptr;<br>
+                        int item;<br>
+                        ptr = (struct node *) malloc(sizeof(struct node *));<br>
+                        if(ptr == NULL)<br>
+                        {<br><br>
+                        printf("\nOVERFLOW");<br><br>
+                        }<br>
+                        else<br>
+                        {<br><br>
+                        printf("\nEnter value\n");<br>
+                        scanf("%d",&item);<br>
+                        ptr->data = item;<br>
+                        ptr->next = head;<br>
+                        head = ptr;<br>
+                        printf("\nNode inserted");<br>
+                        }<br><br>
+
+                        }<br><br>
+                        void lastinsert()<br><br>
+                        {<br><br>
+                        struct node *ptr,*temp;<br>
+                        int item;<br>
+                        ptr = (struct node*)malloc(sizeof(struct node));<br>
+                        if(ptr == NULL)<br>
+                        {<br>
+                        printf("\nOVERFLOW");<br><br>
+                        }<br>
+                        else<br>
+                        {<br>
+                        printf("\nEnter value?\n");<br>
+                        scanf("%d",&item);<br>
+                        ptr->data = item;<br>
+                        if(head == NULL)<br>
+                        {<br><br>
+                        ptr -> next = NULL;<br>
+                        head = ptr;<br>
+                        printf("\nNode inserted");<br><br>
+                        }<br>
+                        else<br>
+                        {<br><br>
+                        temp = head;<br>
+                        while (temp -> next != NULL)<br>
+                        {<br>
+                        temp = temp -> next;<br>
+                        }<br>
+                        temp->next = ptr;<br>
+                        ptr->next = NULL;<br>
+                        printf("\nNode inserted");<br>
+                        }<br>
+                        }<br>
+                        }<br><br>
+                        void randominsert()<br>
+                        {<br><br>
+                        int i,loc,item;<br>
+                        struct node *ptr, *temp;<br>
+                        ptr = (struct node *) malloc (sizeof(struct node));<br><br>
+                        if(ptr == NULL)<br>
+                        {<br>
+                        printf("\nOVERFLOW");<br>
+                        }<br>
+                        else<br>
+                        {<br><br>
+                        printf("\nEnter element value");<br>
+                        scanf("%d",&item);<br><br>
+                        ptr->data = item;<br>
+                        printf("\nEnter the location after which you want to insert ");<br>
+                        scanf("\n%d",&loc);<br><br>
+                        temp=head;<br>
+                        for(i=0;i<loc;i++) { temp=temp->next;<br>
+                            if(temp == NULL)<br>
+                            {<br>
+                            printf("\ncan't insert\n");<br>
+                            return;<br>
+                            }<br>
+
+                            }<br>
+                            ptr ->next = temp ->next;<br>
+                            temp ->next = ptr;<br>
+                            printf("\nNode inserted");<br>
+                            }<br>
+                            }<br>
+                            void begin_delete()<br>
+                            {<br>
+                            struct node *ptr;<br>
+                            if(head == NULL)<br>
+                            {<br>
+                            printf("\nList is empty\n");<br>
+                            }<br>
+                            else<br>
+                            {<br>
+                            ptr = head;<br>
+                            head = ptr->next;<br>
+                            free(ptr);<br>
+                            printf("\nNode deleted from the begining ...\n");<br>
+                            }<br>
+                            }<br>
+                            void last_delete()<br>
+                            {<br>
+                            struct node *ptr,*ptr1;<br>
+                            if(head == NULL)<br>
+                            {<br>
+                            printf("\nlist is empty");<br>
+                            }<br>
+                            else if(head -> next == NULL)<br>
+                            {<br>
+                            head = NULL;<br>
+                            free(head);<br>
+                            printf("\nOnly node of the list deleted ...\n");<br>
+                            }<br>
+
+                            else<br>
+                            {<br>
+                            ptr = head;<br>
+                            while(ptr->next != NULL)<br>
+                            {<br><br>
+                            ptr1 = ptr;<br>
+                            ptr = ptr ->next;<br>
+                            }<br>
+                            ptr1->next = NULL;<br>
+                            free(ptr);<br>
+                            printf("\nDeleted Node from the last ...\n");<br>
+                            }<br>
+                            }<br><br>
+                            void random_delete()<br><br>
+                            {<br><br>
+                            struct node *ptr,*ptr1;<br>
+                            int loc,i;<br>
+                            printf("\n Enter the location of the node after which you want to perform deletion \n");<br>
+                            scanf("%d",&loc);<br>
+                            ptr=head;<br>
+                            for(i=0;i<loc;i++) { ptr1=ptr; ptr=ptr->next;<br>
+
+                                if(ptr == NULL)<br>
+                                {<br>
+                                printf("\nCan't delete");<br>
+                                return;<br>
+                                }<br>
+                                }<br><br>
+                                ptr1 ->next = ptr ->next;<br>
+                                free(ptr);<br>
+                                printf("\nDeleted node %d ",loc+1);<br>
+                                }<br><br>
+                                void search()<br>
+                                {<br>
+                                struct node *ptr;<br>
+                                int item,i=0,flag;<br>
+                                ptr = head;<br>
+                                if(ptr == NULL)<br>
+                                {<br>
+                                printf("\nEmpty List\n");<br>
+                                }<br>
+                                else<br>
+                                {<br>
+                                printf("\nEnter item which you want to search?\n");<br>
+                                scanf("%d",&item);<br>
+                                while (ptr!=NULL)<br>
+                                {<br>
+                                if(ptr->data == item)<br>
+                                {<br>
+                                printf("item found at location %d ",i+1);<br>
+                                flag=0;<br>
+                                }<br>
+                                else<br>
+                                {<br>
+                                flag=1;<br>
+                                }<br>
+                                i++;<br>
+                                ptr = ptr -> next;<br>
+                                }<br>
+                                if(flag==1)<br>
+                                {<br>
+                                printf("Item not found\n");<br>
+                                }<br>
+                                }<br>
+                                
+                                }<br><br>
+
+                                void display()<br>
+                                {<br>
+                                struct node *ptr;<br>
+                                ptr = head;<br>
+                                if(ptr == NULL)<br>
+                                {<br>
+                                printf("Nothing to print");<br>
+                                }<br>
+                                else<br>
+                                {<br>
+                                printf("\nprinting values . . . . .\n");<br>
+                                while (ptr!=NULL)<br>
+                                {<br>
+                                printf("\n%d",ptr->data);<br>
+                                ptr = ptr -> next;<br><br>
+                                }<br>
+                                }<br>
+                                }<br>
+                            </div>
+
+                              <h2>Output:</h2> <br><br>
+<div class="box-container">
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br><br>
+
+                                Enter your choice?<br>
+                                1<br>
+                                <br>
+                                Enter value<br>
+                                1<br>
+                                <br>
+                                Node inserted<br><br>
+
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br><br>
+
+                                Enter your choice?<br>
+                                2<br>
+                                <br>
+                                Enter value?<br>
+                                2<br>
+                                <br>
+                                Node inserted<br>
+                                <br>
+                                *********Main Menu*********<br>
+                                <br>
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+
+                                Enter your choice?<br>
+                                3<br>
+
+                                Enter element value1<br><br>
+
+                                Enter the location after which you want to insert 1<br><br>
+
+                                Node inserted<br><br>
+
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br><br>
+
+                                Enter your choice?<br>
+                                8<br>
+                                <br>
+                                printing values . . . . .<br>
+                                <br>
+                                1<br>
+                                2<br>
+                                1<br>
+
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+                                <br>
+                                Enter your choice?<br>
+                                2<br>
+                                <br>
+                                Enter value?<br>
+                                123<br>
+                                <br>
+                                Node inserted<br><br>
+
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+                                <br>
+                                Enter your choice?<br>
+                                1<br>
+                                <br>
+                                Enter value<br>
+                                1234<br>
+                                <br>
+                                Node inserted<br>
+                                <br>
+                                *********Main Menu*********<br><br>
+                                <br>
+                                Choose one option from the following list ...<br>
+                                <br>
+                                ===============================================<br>
+                                <br>
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+                                <br>
+                                Enter your choice?<br>
+                                4<br>
+                                <br>
+                                Node deleted from the begining ...<br>
+                                <br>
+                                *********Main Menu*********<br>
+                                <br>
+                                Choose one option from the following list ...<br>
+                                <br>
+                                ===============================================<br>
+                                <br>
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+                                <br>
+                                Enter your choice?<br>
+                                5<br>
+                                <br>
+                                Deleted Node from the last ...<br><br>
+
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+                                <br>
+                                Enter your choice?<br>
+                                6<br>
+
+                                Enter the location of the node after which you want to perform deletion<br>
+                                1<br>
+                                <br>
+
+                                Deleted node 2<br><br>
+                            
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+
+                                Enter your choice?<br>
+                                8<br>
+
+                                printing values . . . . .<br>
+                                <br>
+                                1<br>
+                                1<br>
+
+                                *********Main Menu*********<br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.<br><br>
+
+                                Enter your choice?<br>
+                                7<br><br>
+
+                                Enter item which you want to search?<br>
+                                1<br>
+                                item found at location 1<br>
+                                item found at location 2<br>
+                                <br>
+                                *********Main Menu*********<br><br>
+
+                                Choose one option from the following list ...<br><br>
+
+                                ===============================================<br><br>
+
+                                1.Insert in begining<br>
+                                2.Insert at last<br>
+                                3.Insert at any random location<br>
+                                4.Delete from Beginning<br>
+                                5.Delete from last<br>
+                                6.Delete node after specified location<br>
+                                7.Search for an element<br>
+                                8.Show<br>
+                                9.Exit<br>
+
+                                Enter your choice?<br>
+                                9<br>
+                            
+            </div>
+            <button class="button button2">
+                <a href="linked_list.html">PREV</a></button>
+            <button class=" button button1">
+                <a href="double-linkedlist.html">NEXT</a></button>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div id="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h3>About DSC</h3>
+                    <p>codesyouth is platform used for Multinational company recruitment process and
+                        brief history about that and also about<br>seminar topic for computer science
+                        student.Codesyouth is a project developing<br>under Developer student club.</p>
+                </div>
+                <div class="footer-items">
+                    <h3>NOTS</h3>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/java-tutorial">java</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h3>Contact Us</h3>
+                    <div class="border"></div>
+                    <a href="https://www.facebook.com/javatpoint">
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <img src="facebook.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.javatpoint.com/instagram-algorithm">
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        <img src="instagram.webp" width="35px" height="35px">
+                    </a>
+                    <a href="https://twitter.com/pagejavatpoint">
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <img src="twitter.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg">
+                        <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                        <img src="youtube.png" width="35px" height="35px">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            Copyright@codesyouth 2020. All rights reserved.
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dsc-coea</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+        </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+        
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+
+    <div id="contentcolumn">
+        <div id="rightcolumn">
+            <div class="innertext">
+              <h2>Doubly linked list
+            </h2><br><br>
+
+Doubly linked list is a complex type of linked list in which a node contains a pointer to the previous as well as the next node in the sequence. Therefore, in a doubly linked list, a node consists of three parts: node data, pointer to the next node in sequence (next pointer) , pointer to the previous node (previous pointer). A sample node in a doubly linked list is shown in the figure.
+<br><br>
+<img src="doubly-linked-list2.png"width="700"height="300"><br><br>
+In C, structure of a node in doubly linked list can be given as :<br><br>
+<div class="box">
+    struct node   <br>
+{  <br>
+    struct node *prev;  <br> 
+    int data;  <br>
+    struct node *next;  <br> 
+}   <br>
+</div>
+<br>
+<br>
+The prev part of the first node and the next part of the last node will always contain null indicating end in each direction.
+<br><br>
+In a singly linked list, we could traverse only in one direction, because each node contains address of the next node and it doesn't have any record of its previous nodes. However, doubly linked list overcome this limitation of singly linked list. Due to the fact that, each node of the list contains the address of its previous node, we can find all the details about the previous node as well by using the previous address stored inside the previous part of each node.
+<br><br>
+<h2>Memory Representation of a doubly linked list
+</h2>
+<br><br>
+Memory Representation of a doubly linked list is shown in the following image. Generally, doubly linked list consumes more space for every node and therefore, causes more expansive basic operations such as insertion and deletion. However, we can easily manipulate the elements of the list since the list maintains pointers in both the directions (forward and backward).
+<br><br>
+In the following image, the first element of the list that is i.e. 13 stored at address 1. The head pointer points to the starting address 1. Since this is the first element being added to the list therefore the prev of the list contains null. The next node of the list resides at address 4 therefore the first node contains 4 in its next pointer.
+<br><br>
+We can traverse the list in this way until we find any node containing null or -1 in its next part.
+<br><br>
+<img src="doubly-linked-list-memory-representation.png"width="800"height="400"><br><br>
+<h2>Operations on doubly linked list
+</h2><br><br>
+<div class="box">
+    struct node   <br>
+{  <br>
+    struct node *prev;<br>  
+    int data;  <br>
+    struct node *next;  <br>
+};  <br>
+struct node *head<br>
+</div>
+<button class="button button" >
+    <a href="https://www.javatpoint.com/doubly-linked-list">Read More</a>
+</button>
+            </div>
+            <button class="button button2">
+                <a href="singly-linkedlist.html">PREV</a></button>
+            <button class=" button button1">
+                <a href="circular-linked-list.html">NEXT</a></button>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div id="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h3>About DSC</h3>
+                    <p>codesyouth is platform used for Multinational company recruitment process and
+                        brief history about that and also about<br>seminar topic for computer science
+                        student.Codesyouth is a project developing<br>under Developer student club.</p>
+                </div>
+                <div class="footer-items">
+                    <h3>NOTS</h3>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/java-tutorial">java</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h3>Contact Us</h3>
+                    <div class="border"></div>
+                    <a href="https://www.facebook.com/javatpoint">
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <img src="facebook.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.javatpoint.com/instagram-algorithm">
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        <img src="instagram.webp" width="35px" height="35px">
+                    </a>
+                    <a href="https://twitter.com/pagejavatpoint">
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <img src="twitter.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg">
+                        <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                        <img src="youtube.png" width="35px" height="35px">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            Copyright@codesyouth 2020. All rights reserved.
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

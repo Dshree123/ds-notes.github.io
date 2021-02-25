@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Dsc-coea</a></li>
+            <li><a href="#">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+  </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+            
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+
+        <div id="contentcolumn">
+            <div id="rightcolumn">
+            <div class="innertext">
+                <h2>Pointer</h2><br><br>
+                Pointer is used to points the address of the value stored anywhere in the computer memory. To obtain the
+                value stored at the location is known as dereferencing the pointer. Pointer improves the performance for
+                repetitive process such as:
+                <br><br>
+                <ul>
+                    <li>Traversing String
+                    </li><br>
+                    <li>Lookup Tables
+                    </li><br>
+                    <li>Control Tables
+                    </li><br>
+                    <li>Tree Structures
+                    </li><br>
+
+                </ul>
+                <br><br>
+                <img src="data-structure-pointer-performance1.jpg" width="400px" height="200px">
+
+                <h2>Pointer Details
+                </h2><br><br>
+                <ul>
+                    <li><b>Pointer arithmetic:</b> There are four arithmetic operators that can be used in pointers: ++,
+                        --, +, -</li><br>
+                    <li> <b>Array of pointers: </b>You can define arrays to hold a number of pointers.</li><br>
+                    <li><b> Pointer to pointer:</b> C allows you to have pointer on a pointer and so on.</li><br>
+                    <li> <b>Passing pointers to functions in C:</b> Passing an argument by reference or by address
+                        enable the passed argument to be changed in the calling function by the called function.</li>
+                    <br>
+                    <li> <b>Return pointer from functions in C:</b> C allows a function to return a pointer to the local
+                        variable, static variable and dynamically allocated memory as well.
+                    </li><br>
+                </ul>
+                <img src="pointer.png" width="500px" height="300px">
+                <br><br>
+                <h3>Program
+                </h3><br><br>
+                <b>Pointer</b><br><br>
+                <div class="box">
+                    #include <stdio.h><br><br>
+
+                        int main( ) <br>
+                        { <br>
+                        int a = 5; <br>
+                        int *b; <br>
+                        b = &a; <br><br>
+
+                        printf ("value of a = %d\n", a); <br>
+                        printf ("value of a = %d\n", *(&a)); <br>
+                        printf ("value of a = %d\n", *b); <br>
+                        printf ("address of a = %u\n", &a); <br>
+                        printf ("address of a = %d\n", b); <br>
+                        printf ("address of b = %u\n", &b); <br>
+                        printf ("value of b = address of a = %u", b);<br>
+                        return 0; <br>
+                        } <br>
+                </div><br><br>
+                <b>Output </b>
+                <div class="box">
+                    value of a = 5 <br>
+                    value of a = 5 <br>
+                    address of a = 3010494292<br>
+                    address of a = -1284473004 <br>
+                    address of b = 3010494296 <br>
+                    value of b = address of a = 3010494292 <br>
+                </div>
+                <b>Pointer to Pointer
+                </b><br><br>
+                <div class="box">
+                    #include <stdio.h><br>
+
+                        int main( )<br>
+                        {<br>
+                        int a = 5;<br>
+                        int *b;<br>
+                        int **c;<br>
+                        b = &a;<br>
+                        c = &b;<br><br>
+                        printf ("value of a = %d\n", a);<br>
+                        printf ("value of a = %d\n", *(&a));<br>
+                        printf ("value of a = %d\n", *b);<br>
+                        printf ("value of a = %d\n", **c);<br>
+                        printf ("value of b = address of a = %u\n", b);<br>
+                        printf ("value of c = address of b = %u\n", c);<br>
+                        printf ("address of a = %u\n", &a);<br>
+                        printf ("address of a = %u\n", b);<br>
+                        printf ("address of a = %u\n", *c);<br>
+                        printf ("address of b = %u\n", &b);<br>
+                        printf ("address of b = %u\n", c);<br>
+                        printf ("address of c = %u\n", &c);<br>
+                        return 0;<br>
+                        }<br>
+                </div>
+                <b>Pointer to Pointer:output</b>
+                <div class="box">
+                    value of a = 5 <br>
+                    value of a = 5 <br>
+                    value of a = 5 <br>
+                    value of a = 5 <br>
+                    value of b = address of a = 2831685116 <br>
+                    value of c = address of b = 2831685120 <br>
+                    address of a = 2831685116 <br>
+                    address of a = 2831685116 <br>
+                    address of a = 2831685116 <br>
+                    address of b = 2831685120 <br>
+                    address of b = 2831685120 <br>
+                    address of c = 2831685128 <br>
+                </div>
+            </div>
+            <button class="button button2">
+                <a href="asympotic_analysis.html">PREV</a></button>
+        <button class=" button button1">
+                    <a href="ds_structure.html">NEXT</a></button>
+
+        </div>
+    </div>
+      
+<footer>
+    <div id="footer">
+        <div class="inner-footer">
+            <div class="footer-items">
+    <h3>About DSC</h3>
+    <p>codesyouth is platform used for Multinational company recruitment process and
+        brief history about that and also about<br>seminar topic for computer science
+        student.Codesyouth is a project developing<br>under Developer student club.</p>
+</div>
+<div class="footer-items">
+    <h3>NOTS</h3>
+    <div class="border"></div>
+    <ul>
+        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+        <br>
+            <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+          <br>
+            <a href="https://www.javatpoint.com/java-tutorial">java</a>
+          <br>
+          <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+          <br>
+          <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+          <br>
+          <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+          
+    </ul>
+</div>
+<div class="footer-items">
+    <h3>Contact Us</h3>
+    <div class="border"></div>
+    <a href="https://www.facebook.com/javatpoint"><li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+    <img src="facebook.png"width="35px"height="35px"></a>
+    <a href="https://www.javatpoint.com/instagram-algorithm"><li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+    <img src="instagram.webp"width="35px"height="35px"></a>
+    <a href="https://twitter.com/pagejavatpoint"><li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+        <img src="twitter.png"width="35px"height="35px"></a>
+        <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+        <img src="youtube.png"width="35px"height="35px"></a>
+    </div>
+</div>
+
+</div>
+<div class="footer-bottom">
+Copyright@codesyouth  2020. All rights reserved.
+</div>
+
+  
+</footer>
+     
+
+</body>
+
+</html>

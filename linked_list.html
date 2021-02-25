@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dsc-coea</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+  </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+    
+        <div id="contentcolumn">
+            <div id="rightcolumn">
+            <div class="innertext">
+                <h2>Linked List
+                </h2><br><br>
+                <h3>What is Linked List?
+                </h3><br><br>
+                A linked list is also a collection of elements, but the elements are not stored in a consecutive location.<br><br>
+
+Suppose a programmer made a request for storing the integer value then size of 4-byte memory block is assigned to the integer value. The programmer made another request for storing 3 more integer elements; then, three different memory blocks are assigned to these three elements but the memory blocks are available in a random location. So, how are the elements connected?.
+<br><br>
+These elements are linked to each other by providing one additional information along with an element, i.e., the address of the next element. The variable that stores the address of the next element is known as a pointer. Therefore, we conclude that the linked list contains two parts, i.e., the first one is the data element, and the other is the pointer. The pointer variable will occupy 4 bytes which is pointing to the next element.
+<br><br>
+<b><i>A linked list can also be defined as the collection of the nodes in which one node is connected to another node, and node consists of two parts, i.e., one is the data part and the second one is the address part, as shown in the below figure:
+</i></b><br><br>
+<img src="ds-linked-list.png"width="800px"height="300px"><br><br>
+In the above figure, we can observe that each node contains the data and the address of the next node. The last node of the linked list contains the NULL value in the address part.
+<br><br>
+<h2>How can we declare the Linked list?
+</h2><br><br>
+
+The declaration of an array is very simple as it is of single type. But the linked list contains two parts, which are of two different types, i.e., one is a simple variable, and the second one is a pointer variable. We can declare the linked list by using the user-defined data type known as structure.
+<br>
+<br>
+The structure of a linked list can be defined as:<br><br>
+<div class="box">
+    struct node  <br>
+{  <br>
+   int data;  <br>
+   struct node *next;  <br>
+}  
+</div>
+<h2>Advantages of using a Linked list over Array
+</h2><br><br>
+<b>The following are the advantages of using a linked list over an array:
+</b><br><br>
+<ul>
+    <li><b>Dynamic data structure:</b><br>
+        The size of the linked list is not fixed as it can vary according to our requirements.    </li><br>
+        <li><b>Insertion and Deletion:</b><br>Insertion and deletion in linked list are easier than array as the elements in an array are stored in a consecutive location. In contrast, in the case of a linked list, the elements are stored in a random location. The complexity for insertion and deletion of elements from the beginning is O(1) in the linked list, while in the case of an array, the complexity would be O(n). If we want to insert or delete the element in an array, then we need to shift the elements for creating the space. On the other hand, in the linked list, we do not have to shift the elements. In the linked list, we just need to update the address of the pointer in the node.
+        </li><br>
+        <li><b>Memory efficient:</b><br>Its memory consumption is efficient as the size of the linked list can grow or shrink according to our requirements.
+        </li><br>
+        <li><b>Implementation:</b><br>Both the stacks and queues can be implemented using a linked list.
+
+        </li>
+</ul>
+<br>
+<br>
+<h2>Disadvantages of Linked list
+</h2><br><br>
+<ul>
+    <li><b>Memory usage</b><br>
+        The node in a linked list occupies more memory than array as each node occupies two types of variables, i.e., one is a simple variable, and another is a pointer variable that occupies 4 bytes in the memory.
+    </li><br> 
+    <li><b>Traversal</b><br>
+        In a linked list, the traversal is not easy. If we want to access the element in a linked list, we cannot access the element randomly, but in the case of an array, we can randomly access the element by index. For example, if we want to access the 3rd node, then we need to traverse all the nodes before it. So, the time required to access a particular node is large.
+    </li><br>
+     <li><b> Reverse traversing</b><br>
+        In a linked list, backtracking or reverse traversing is difficult. In a doubly linked list, it is easier but requires more memory to store the back pointer.</li><br>
+    </ul>
+    <h2>Applications of Linked List
+    </h2><br><br>
+    <ul>
+        <li>With the help of a linked list, the polynomials can be represented as well as we can perform the operations on the polynomial. We know that polynomial is a collection of terms in which each term contains coefficient and power. The coefficients and power of each term are stored as node and link pointer points to the next element in a linked list, so linked list can be used to create, delete and display the polynomial.</li>
+    <br><br>
+    <img src="ds-linked-list2.png"width="800px"height="300px"><br><br>
+<br>
+<br>
+<li>A sparse matrix is used in scientific computation and numerical analysis. So, a linked list is used to represent the sparse matrix.
+</li><br>
+<li>The various operations like student's details, employee's details or product details can be implemented using the linked list as the linked list uses the structure data type that can hold different data types.
+</li><br>
+<li>Stack, Queue, tree and various other data structures can be implemented using a linked list.
+</li><br>
+<li>The graph is a collection of edges and vertices, and the graph can be represented as an adjacency matrix and adjacency list. If we want to represent the graph as an adjacency matrix, then it can be implemented as an array. If we want to represent the graph as an adjacency list, then it can be implemented as a linked list.
+</li><br>
+<li>To implement hashing, we require hash tables. The hash table contains entries that are implemented using linked list.
+</li><br>
+<li>A linked list can be used to implement dynamic memory allocation. The dynamic memory allocation is the memory allocation done at the run-time.
+</li>
+    </ul><br>
+    <br>
+    <h2>Types of Linked List
+    </h2><br><br>
+    <ul>
+        <li>Singly Linked list</li><br>
+         <li>Doubly Linked list</li>  <br>
+            <li>Circular Linked list</li><br>
+           <li> Doubly Circular Linked list</li>
+    </ul><br><br>
+    <h2>Singly Linked list
+    </h2><br><br>
+    It is the commonly used linked list in programs. If we are talking about the linked list, it means it is a singly linked list. The singly linked list is a data structure that contains two parts, i.e., one is the data part, and the other one is the address part, which contains the address of the next or the successor node. The address part in a node is also known as a pointer.
+<br>
+Suppose we have three nodes, and the addresses of these three nodes are 100, 200 and 300 respectively. The representation of three nodes as a linked list is shown in the below figure:
+<br><br>
+<img src="ds-types-of-linked-list.png"width="500px"height="300px"><br><br>
+<br><br>
+
+We can observe in the above figure that there are three different nodes having address 100, 200 and 300 respectively. The first node contains the address of the next node, i.e., 200, the second node contains the address of the last node, i.e., 300, and the third node contains the NULL value in its address part as it does not point to any node. The pointer that holds the address of the initial node is known as a head pointer.
+<br>
+The linked list, which is shown in the above diagram, is known as a singly linked list as it contains only a single link. In this list, only forward traversal is possible; we cannot traverse in the backward direction as it has only one link in the list.
+
+<br><br>
+<b>Representation of the node in a singly linked list</b><br>
+<div class="box">
+    struct node  <br>
+
+{  <br>
+   int data;  <br>
+   struct node *next;  <br>
+}  
+</div>
+<br>
+<h2>Doubly linked list
+</h2><br><br>
+
+As the name suggests, the doubly linked list contains two pointers. We can define the doubly linked list as a linear data structure with three parts: the data part and the other two address part. In other words, a doubly linked list is a list that has three parts in a single node, includes one data part, a pointer to its previous node, and a pointer to the next node.
+<br>
+Suppose we have three nodes, and the address of these nodes are 100, 200 and 300, respectively. The representation of these nodes in a doubly-linked list is shown below:
+<br><br>
+<img src="ds-types-of-linked-list2.png"width="500px"height="300px"><br><br>
+As we can observe in the above figure, the node in a doubly-linked list has two address parts; one part stores the address of the next while the other part of the node stores the previous node's address. The initial node in the doubly linked list has the NULL value in the address part, which provides the address of the previous node.
+<br><br>
+<b>Representation of the node in a doubly linked list
+</b>
+<br>
+<div class="box">
+    struct node  <br>
+{  <br>
+  int data;  <br>
+  struct node *next; <br> 
+ struct node *prev;   <br>
+}   
+</div>
+In the above representation, we have defined a user-defined structure named a node with three members, one is data of integer type, and the other two are the pointers, i.e., next and prev of the node type. The next pointer variable holds the address of the next node, and the prev pointer holds the address of the previous node. The type of both the pointers, i.e., next and prev is struct node as both the pointers are storing the address of the node of the struct node type.
+
+<br><br>
+<h2>Circular linked list
+</h2><br><br>
+A circular linked list is a variation of a singly linked list. The only difference between the singly linked list and a circular linked list is that the last node does not point to any node in a singly linked list, so its link part contains a NULL value. On the other hand, the circular linked list is a list in which the last node connects to the first node, so the link part of the last node holds the first node's address. The circular linked list has no starting and ending node. We can traverse in any direction, i.e., either backward or forward. The diagrammatic representation of the circular linked list is shown below:
+<br><br>
+<div class="box">
+    struct n.ode  
+{  
+   int data;  
+   struct node *next;  
+}  
+</div>
+A circular linked list is a sequence of elements in which each node has a link to the next node, and the last node is having a link to the first node. The representation of the circular linked list will be similar to the singly linked list, as shown below:
+<br><br>
+<img src="ds-types-of-linked-list3.png"width="500px"height="300px"><br><br>
+<h2>Doubly Circular linked list
+</h2><br><br>
+The doubly circular linked list has the features of both the circular linked list and doubly linked list.<br>
+<img src="ds-types-of-linked-list4.png"width="500px"height="300px"><br><br>
+
+
+The above figure shows the representation of the doubly circular linked list in which the last node is attached to the first node and thus creates a circle. It is a doubly linked list also because each node holds the address of the previous node also. The main difference between the doubly linked list and doubly circular linked list is that the doubly circular linked list does not contain the NULL value in the previous field of the node. As the doubly circular linked contains three parts, i.e., two address parts and one data part so its representation is similar to the doubly linked list.
+<br><br>
+<div class="box">
+    struct node  <br>
+{  <br>
+  int data;  <br>
+  struct node *next;<br>  
+ struct node *prev;   <br>
+}  
+</div>
+
+
+
+
+
+            </div>
+            <button class="button button2">
+                <a href="2d_array.html">PREV</a></button>
+            <button class=" button button1">
+                    <a href="">NEXT</a></button>
+
+        </div>
+    </div>
+      
+<footer>
+    <div id="footer">
+        <div class="inner-footer">
+            <div class="footer-items">
+    <h3>About DSC</h3>
+    <p>codesyouth is platform used for Multinational company recruitment process and
+        brief history about that and also about<br>seminar topic for computer science
+        student.Codesyouth is a project developing<br>under Developer student club.</p>
+</div>
+<div class="footer-items">
+    <h3>NOTS</h3>
+    <div class="border"></div>
+    <ul>
+        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+        <br>
+            <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+          <br>
+            <a href="https://www.javatpoint.com/java-tutorial">java</a>
+          <br>
+          <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+          <br>
+          <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+          <br>
+          <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+          
+    </ul>
+</div>
+<div class="footer-items">
+    <h3>Contact Us</h3>
+    <div class="border"></div>
+    <a href="https://www.facebook.com/javatpoint"><li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+    <img src="facebook.png"width="35px"height="35px"></a>
+    <a href="https://www.javatpoint.com/instagram-algorithm"><li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+    <img src="instagram.webp"width="35px"height="35px"></a>
+    <a href="https://twitter.com/pagejavatpoint"><li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+        <img src="twitter.png"width="35px"height="35px"></a>
+        <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+        <img src="youtube.png"width="35px"height="35px"></a>
+    </div>
+</div>
+
+</div>
+<div class="footer-bottom">
+Copyright@codesyouth  2020. All rights reserved.
+</div>
+
+  
+</footer>
+     
+
+</body>
+
+</html>

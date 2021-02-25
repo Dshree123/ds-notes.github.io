@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dsc-coea</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+        </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+
+    <div id="contentcolumn">
+        <div id="rightcolumn">
+            <div class="innertext">
+                <h2>What is a Stack?
+                </h2><br><br>
+                A Stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle. Stack has one
+                end, whereas the Queue has two ends (front and rear). It contains only one pointer top pointer pointing
+                to the topmost element of the stack. Whenever an element is added in the stack, it is added on the top
+                of the stack, and the element can be deleted only from the stack. In other words, a stack can be defined
+                as a container in which insertion and deletion can be done from the one end known as the top of the
+                stack.
+                <br><br>
+                <h2>Some key points related to stack
+                </h2><br><br>
+                <ul>
+                    <li>It is called as stack because it behaves like a real-world stack, piles of books, etc. </li><br>
+                    <li>A Stack is an abstract data type with a pre-defined capacity, which means that it can store the
+                        elements of a limited size. </li><br>
+                    <li>A Stack is an abstract data type with a pre-defined capacity, which means that it can store the
+                        elements of a limited size.
+                    </li><br>
+                </ul>
+                <h2>Working of Stack
+                </h2><br><br>
+                Stack works on the LIFO pattern. As we can observe in the below figure there are five memory blocks in
+                the stack; therefore, the size of the stack is 5.
+                <br><br>
+                Suppose we want to store the elements in a stack and let's assume that stack is empty. We have taken the
+                stack of size 5 as shown below in which we are pushing the elements one by one until the stack becomes
+                full.
+                <br><br>
+                <img src="ds-stack.png" width="600px" height="300px"><br><br>
+                Since our stack is full as the size of the stack is 5. In the above cases, we can observe that it goes
+                from the top to the bottom when we were entering the new element in the stack. The stack gets filled up
+                from the bottom to the top.
+                <br><br>
+                When we perform the delete operation on the stack, there is only one way for entry and exit as the other
+                end is closed. It follows the LIFO pattern, which means that the value entered first will be removed
+                last. In the above case, the value 5 is entered first, so it will be removed only after the deletion of
+                all the other elements.
+
+                <br><br>
+                <h2>Standard Stack Operations
+                </h2><br><br>
+                <b>The following are some common operations implemented on the stack:</b><br><br>
+                <ul>
+                    <li><b>push():</b> When we insert an element in a stack then the operation is known as a push. If
+                        the stack is full then the overflow condition occurs.
+                    </li><br>
+                    <li><b>pop():</b> When we delete an element from the stack, the operation is known as a pop. If the
+                        stack is empty means that no element exists in the stack, this state is known as an underflow
+                        state.
+                    </li><br>
+                    <li><b>isEmpty():</b> It determines whether the stack is empty or not.
+                    </li><br>
+                    <li><b>isFull(): </b>It determines whether the stack is full or not.'
+                    </li><br>
+                    <li><b>peek():</b> It returns the element at the given position.
+                    </li><br>
+                    <li><b>count(): </b>It returns the total number of elements available in a stack.
+                    </li><br>
+                    <li><b>change():</b> It changes the element at the given position.
+                    </li><br>
+                    <li><b>display():</b> It prints all the elements available in the stack.
+                    </li><br>
+                </ul>
+                <h2>PUSH operation
+                </h2><br><br>
+                <b>The steps involved in the PUSH operation is given below:</b><br><br>
+                <ul>
+                    <li>Before inserting an element in a stack, we check whether the stack is full. </li><br>
+                    <li>If we try to insert the element in a stack, and the stack is full, then the overflow condition
+                        occurs.
+                    </li><br>
+                    <li>When we initialize a stack, we set the value of top as -1 to check that the stack is empty.
+                    </li><br>
+                    <li>When the new element is pushed in a stack, first, the value of the top gets incremented, i.e.,
+                        top=top+1, and the element will be placed at the new position of the top.
+                    </li><br>
+                    <li>The elements will be inserted until we reach the max size of the stack.
+                    </li><br>
+                </ul>
+                <br>
+                <img src="ds-stack2.png" width="600px" height="300px"><br><br>
+                <h2>POP operation
+                </h2><br><br>
+                <b>The steps involved in the POP operation is given below:</b><br><br>
+                <ul>
+                    <li>Before deleting the element from the stack, we check whether the stack is empty.
+                    </li><br>
+                    <li>If we try to delete the element from the empty stack, then the underflow condition occurs.
+                    </li><br>
+                    <li>If the stack is not empty, we first access the element which is pointed by the top
+                    </li><br>
+                    <li>Once the pop operation is performed, the top is decremented by 1, i.e., top=top-1.
+                    </li><br>
+
+                </ul>
+                <img src="ds-stack3.png" width="600px" height="300px"><br><br>
+                <h2>Array implementation of Stack
+                </h2><br><br>
+                In array implementation, the stack is formed by using the array. All the operations regarding the stack
+                are performed using arrays. Lets see how each operation can be implemented on the stack using array data
+                structure.
+                <br><br>
+                <h2>Adding an element onto the stack (push operation)
+                </h2><br><br>
+                Adding an element into the top of the stack is referred to as push operation. Push operation involves
+                following two steps.
+                <br><br>
+                <ul>
+                    <li>1.Increment the variable Top so that it can now refere to the next memory location.
+                    </li><br>
+                    <li>2.Add element at the position of incremented top. This is referred to as adding new element at
+                        the top of the stack.
+                    </li><br>
+
+                </ul>
+                Stack is overflown when we try to insert an element into a completely filled stack therefore, our main
+                function must always avoid stack overflow condition.
+
+                <br><br>
+                <b>Algorithm:</b><br><br>
+                <div class="box">
+                    begin<br>
+                    if top = n then stack full<br>
+                    top = top + 1<br>
+                    stack (top) : = item;<br>
+                    end<br>
+                </div>
+                <b>Time Complexity : o(1) </b><br>
+                <h2>implementation of push algorithm in C language
+                </h2><br><br>
+                <div class="box">
+                    void push (int val,int n) //n is size of the stack<br>
+                    {<br>
+                    if (top == n )<br>
+                    printf("\n Overflow");<br>
+                    else<br>
+                    {<br>
+                    top = top +1;<br>
+                    stack[top] = val;<br>
+                    }<br>
+                    }<br>
+                </div>
+                <h2>Deletion of an element from a stack (Pop operation)
+                </h2><br><br>
+                Deletion of an element from the top of the stack is called pop operation. The value of the variable top
+                will be incremented by 1 whenever an item is deleted from the stack. The top most element of the stack
+                is stored in an another variable and then the top is decremented by 1. the operation returns the deleted
+                value that was stored in another variable as the result.
+                <br>
+                The underflow condition occurs when we try to delete an element from an already empty stack.<br><br>
+                <b>Algorithm :
+                </b><br><br>
+                <div class="box">
+                    begin<br>
+                    if top = 0 then stack empty;<br>
+                    item := stack(top);<br>
+                    top = top - 1;<br>
+                    end;<br>
+                </div>
+                <b>Time Complexity : o(1) </b>
+                <br>
+                <br>
+                <h2>Implementation of POP algorithm using C language</h2><br><br>
+                <div class="box">
+                    int pop ()<br>
+                    {<br>
+                    if(top == -1)<br>
+                    {<br>
+                    printf("Underflow");<br>
+                    return 0;<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                    return stack[top - - ];<br>
+                    }<br>
+                    }<br>
+                </div>
+                <h2>Visiting each element of the stack (Peek operation)
+                </h2><br><br>
+                Peek operation involves returning the element which is present at the top of the stack without deleting
+                it. Underflow condition can occur if we try to return the top element in an already empty stack.
+                <br><br>
+                <h3>Algorithm :</h3><br>
+                <b>PEEK (STACK, TOP)</b>
+                <br>
+                <div class="box">
+                    Begin<br>
+                    if top = -1 then stack empty<br>
+                    item = stack[top]<br>
+                    return item<br>
+                    End<br>
+                </div>
+                <b>Time complexity: o(n) </b><br>
+                <h2>Implementation of Peek algorithm in C language
+                </h2><br>
+                <br>
+                <div class="box">
+                    int peek()<br>
+                    {<br>
+                    if (top == -1)<br>
+                    {<br>
+                    printf("Underflow");<br>
+                    return 0;<br>
+                    }<br>
+                    else<br>
+                    {<br>
+                    return stack [top];<br>
+                    }<br>
+                    }<br>
+                </div>
+                <button class="button button">
+
+                    <a href="https://www.javatpoint.com/ds-array-implementation-of-stack">Read More</a>
+                </button>
+
+
+
+
+            </div>
+            <button class="button button2">
+                <a href="skip-list.html">PREV</a></button>
+            <button class=" button button1">
+                <a href="linked-list-repre.html">NEXT</a></button>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div id="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h3>About DSC</h3>
+                    <p>codesyouth is platform used for Multinational company recruitment process and
+                        brief history about that and also about<br>seminar topic for computer science
+                        student.Codesyouth is a project developing<br>under Developer student club.</p>
+                </div>
+                <div class="footer-items">
+                    <h3>NOTS</h3>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/java-tutorial">java</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h3>Contact Us</h3>
+                    <div class="border"></div>
+                    <a href="https://www.facebook.com/javatpoint">
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <img src="facebook.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.javatpoint.com/instagram-algorithm">
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        <img src="instagram.webp" width="35px" height="35px">
+                    </a>
+                    <a href="https://twitter.com/pagejavatpoint">
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <img src="twitter.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg">
+                        <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                        <img src="youtube.png" width="35px" height="35px">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            Copyright@codesyouth 2020. All rights reserved.
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Dsc-coea</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+        </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+            <b>DS-TUTORIA</b><br>
+            <a href="index.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+    <div id="contentcolumn">
+        <div id="rightcolumn">
+            <div class="innertext">
+                <h2>What is a Circular Queue?
+                </h2><br><br>
+                A circular queue is similar to a linear queue as it is also based on the FIFO (First In First Out)
+                principle except that the last position is connected to the first position in a circular queue that
+                forms a circle. It is also known as a Ring Buffer.
+                <br>
+                <h2>Operations on Circular Queue
+                </h2><br><br>
+                <ul>
+                    <li><b>Front:</b> It is used to get the front element from the Queue.</li><br>
+                    <li><b>Rear:</b> It is used to get the rear element from the Queue.</li><br>
+                    <li><b>enQueue(value):</b> This function is used to insert the new value in the Queue. The new
+                        element is always inserted from the rear end.</li>
+                    <li><b>deQueue(): </b>This function deletes an element from the Queue. The deletion in a Queue
+                        always takes place from the front end.
+                    </li>
+
+                </ul>
+                <br><br>
+                <h2>Enqueue operation
+                </h2><br><br>
+                <b>The steps of enqueue operation are given below: </b><br><br>
+                <ul>
+                    <li>First, we will check whether the Queue is full or not.
+                    </li><br>
+                    <li>Initially the front and rear are set to -1. When we insert the first element in a Queue, front
+                        and rear both are set to 0.
+                    </li><br>
+                    <li>When we insert a new element, the rear gets incremented, i.e., rear=rear+1.
+                    </li><br>
+                </ul><br>
+                <br>
+                <h2>Scenarios for inserting an element
+                </h2><br><br>
+                <b>There are two scenarios in which queue is not full: </b>
+                <b> If rear != max - 1,</b> then rear will be incremented to mod(maxsize) and the new value will be
+                inserted at the rear end of the queue.
+                <b> If front != 0 and rear = max - 1, </b>it means that queue is not full, then set the value of rear to
+                0 and insert the new element there.
+
+                <br><br>
+                <h3>There are two cases in which the element cannot be inserted: </h3><br><br>
+                When<b>front ==0 && rear = max-1,</b> which means that front is at the first position of the Queue and rear is at the last position of the Queue.
+<br><br>
+front== rear + 1;<br><br>
+
+                <h3>Algorithm to insert an element in a circular queue
+
+                </h3><br><br>
+                <b>Step 1: </b>IF (REAR+1)%MAX = FRONT<br>
+                Write " OVERFLOW "<br>
+                Goto step 4<br>
+                [End OF IF]<br><br>
+
+                <b>Step 2:</b> IF FRONT = -1 and REAR = -1<br>
+
+                SET FRONT = REAR = 0<br>
+                ELSE IF REAR = MAX - 1 and FRONT ! = 0<br>
+                SET REAR = 0<br>
+                ELSE<br>
+                SET REAR = (REAR + 1) % MAX<br>
+                [END OF IF]<br><br>
+
+                <b>Step 3:</b> SET QUEUE[REAR] = VAL<br><br>
+
+                <b>Step 4: </b>EXIT<br>
+                <br><br><br>
+                
+<button class="button button" >
+    <a href="https://www.javatpoint.com/circular-queue">Read More</a>
+            </div>
+            <button class="button button2">
+                <a href="linked-list-repre-queue.html">PREV</a></button>
+            <button class=" button button1">
+                <a href="">NEXT</a></button>
+
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer">
+            <div class="inner-footer">
+                <div class="footer-items">
+                    <h3>About DSC</h3>
+                    <p>codesyouth is platform used for Multinational company recruitment process and
+                        brief history about that and also about<br>seminar topic for computer science
+                        student.Codesyouth is a project developing<br>under Developer student club.</p>
+                </div>
+                <div class="footer-items">
+                    <h3>NOTS</h3>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/java-tutorial">java</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+                        <br>
+                        <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h3>Contact Us</h3>
+                    <div class="border"></div>
+                    <a href="https://www.facebook.com/javatpoint">
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        <img src="facebook.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.javatpoint.com/instagram-algorithm">
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        <img src="instagram.webp" width="35px" height="35px">
+                    </a>
+                    <a href="https://twitter.com/pagejavatpoint">
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <img src="twitter.png" width="35px" height="35px">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg">
+                        <li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+                        <img src="youtube.png" width="35px" height="35px">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Copyright@codesyouth 2020. All rights reserved.
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

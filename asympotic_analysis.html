@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wid
+    th=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ds</title>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">DS</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="https://youtu.be/R_iJzDBiK60">Dsc-coea</a></li>
+            <li><a href="#">Notes</a></li>
+        </ul>
+        <label id="icon"></label>
+        <i class="fas fa-bars"></i>
+    </nav>
+    <div id="contentwrapper">
+        <div class="innertext">
+  </div>
+    </div>
+    <div id="leftcolumn">
+        <div class="innertext">
+            <b>DS-TUTORIA</b><br>
+            <a href="php.html">DS-TUTORIAL</a> <br>
+            <a href="ds_introduction.html">DS Introduction</a><br>
+            <a href="ds_algo.html">DS Algorithm</a><br>
+            <a href="asympotic_analysis.html">Asymptotic Analysis</a><br>
+            <a href="ds_Pointer.html">DS Pointer</a><br>
+            <a href="ds_structure.html"> DS Structure</a><br>
+            <b> DS Array</b><br>
+            <a href="da_array.html"> DS Array</a><br>
+            <a href="2d_array.html"> 2D Array </a><br>
+            <b> DS Linked List</b><br>
+            <a href="linked_list.html"> Linked List</a><br>
+            
+            <a href="singly-linkedlist.html"> Singly Linked List</a><br>
+            <a href="double-linkedlist.html"> Doubly Linked List</a><br>
+            <a href="circular-linked-list.html"> Circular Linked List</a><br>
+            <a href="circular-doubly.html"> Circular Doubly List</a><br>
+            <a href="skip-list.html"> Skip list in DS</a><br>
+            <b>DS Stack</b><br>
+            <a href="stack.html"> DS Stack</a><br>
+            <a href="stack.html"> Array Implementation</a><br>
+            <a href="linked-list-impl.html"> Linked List Implementation</a><br>
+            <b>DS Queue</b><br>
+            <a href="ds-queue.html"> DS Queue</a><br>
+            <a href="ds-queue.html"> Types of Queues</a><br>
+            <a href="linked-list-repre-queue.html"> Array Representation</a><br>
+            <a href="linked-list-repre-queue.html"> Linked List Representation</a><br>
+            <a href="circular-q-dueue.html"> Circular Queue</a><br>
+            <a href=""> Deque</a><br>
+            <a href=""> Priority Queue</a><br>
+        </div>
+    </div>
+    
+        <div id="contentcolumn">
+            <div id="rightcolumn">
+            <div class="innertext">
+                <h2>Asymptotic Analysis
+                </h2><br><br>
+                As we know that data structure is a way of organizing the data efficiently and that efficiency is
+                measured either in terms of time or space. So, the ideal data structure is a structure that occupies the
+                least possible time to perform all its operation and the memory space. Our focus would be on finding the
+                time complexity rather than space complexity, and by finding the time complexity, we can decide which
+                data structure is the best for an algorithm.
+                <br><br>
+                The main question arises in our mind that on what basis should we compare the time complexity of data
+                structures?. The time complexity can be compared based on operations performed on them. Let's consider a
+                simple example.
+
+                <br><br>
+                Suppose we have an array of 100 elements, and we want to insert a new element at the beginning of the
+                array. This becomes a very tedious task as we first need to shift the elements towards the right, and we
+                will add new element at the starting of the array.
+
+                <br><br>
+                Suppose we consider the linked list as a data structure to add the element at the beginning. The linked
+                list contains two parts, i.e., data and address of the next node. We simply add the address of the first
+                node in the new node, and head pointer will now point to the newly added node. Therefore, we conclude
+                that adding the data at the beginning of the linked list is faster than the arrays. In this way, we can
+                compare the data structures and select the best possible data structure for performing the operations.
+                <br><br>
+                <h2>How to find the Time Complexity or running time for performing the operations?
+                </h2><br><br>
+
+                The measuring of the actual running time is not practical at all. The running time to perform any
+                operation depends on the size of the input. Let's understand this statement through a simple example.
+                <br><br>
+                Suppose we have an array of five elements, and we want to add a new element at the beginning of the
+                array. To achieve this, we need to shift each element towards right, and suppose each element takes one
+                unit of time. There are five elements, so five units of time would be taken. Suppose there are 1000
+                elements in an array, then it takes 1000 units of time to shift. It concludes that time complexity
+                depends upon the input size.
+                <br><br>
+                Therefore, if the input size is n, then f(n) is a function of n that denotes the time complexity.
+                <br><br>
+                <b>Example:</b> Running time of one operation is x(n) and for another operation, it is calculated as
+                f(n2). It refers to running time will increase linearly with an increase in 'n' for the first operation,
+                and running time will increase exponentially for the second operation. Similarly, the running time of
+                both operations will be the same if n is significantly small.
+                <br><br>Usually, the time required by an algorithm comes under three types:<br><br>
+                <b>Worst case: </b>It defines the input for which the algorithm takes a huge time.<br><br>
+
+                <b>Average case:</b> It takes average time for the program execution.<br><br>
+
+                <b>Best case: </b>It defines the input for which the algorithm takes the lowest time<br><br>
+                <h2>Asymptotic Notations
+                </h2><br><br>
+                <ul>
+                    <li>1.Big oh Notation (?)</li><br>
+                    <li> 2.Omega Notation (Ω)</li><br>
+                    <li> 3.Theta Notation (θ)</li><br>
+                </ul>
+                <br><br>
+                <h2>Big oh Notation (O)
+                </h2>
+                <br><br>
+                <ul>
+                    <li>Big O notation is an asymptotic notation that measures the performance of an algorithm by simply
+                        providing the order of growth of the function.
+                    </li><br><br>
+                    <li>This notation provides an upper bound on a function which ensures that the function never grows
+                        faster than the upper bound. So, it gives the least upper bound on a function so that the
+                        function never grows faster than this upper bound.
+                    </li><br><br>
+                </ul>
+                <br><br>It is the formal way to express the upper boundary of an algorithm running time. It measures the
+                worst case of time complexity or the algorithm's longest amount of time to complete its operation. It is
+                represented as shown below:
+                <br><br>
+                <img src="data-structure-asymptotic-analysis.png" width="300px" height="300px">
+                <br><br>
+                <b>For example:</b><br><br>
+
+                If <b>f(n)</b> and <b>g(n)</b> are the two functions defined for positive integers,<br><br>
+
+                then<b> f(n) = O(g(n))</b> as<b> f(n) is big oh of g(n) or f(n)</b> is on the order of g(n)) if there
+                exists constants c and no such that:<br><br>
+
+                <b>f(n)≤c.g(n) for all n≥no</b><br><br>
+
+                This implies that f(n) does not grow faster than g(n), or g(n) is an upper bound on the function f(n).
+                In this case, we are calculating the growth rate of the function which eventually calculates the worst
+                time complexity of a function, i.e., how worst an algorithm can perform.
+                <br><br>
+                <b>Let's understand through examples</b>
+                <br<br>
+
+                    Example 1: f(n)=2n+3 , g(n)=n<br><br>
+
+                    Now, we have to find <b>Is f(n)=O(g(n))?</b><br><br>
+
+                    To check f(n)=O(g(n)), it must satisfy the given condition:<br><br>
+
+                    <b>f(n)<=c.g(n)< /b><br><br>
+
+                            First, we will replace f(n) by 2n+3 and g(n) by n.<br<br>>
+
+                                2n+3 <= c.n<br><br>
+                                    Let's assume c=5, n=1 then<br><br>
+
+                                    2*1+3<=5*1<br>
+
+                                        5<=5<br>
+
+                                            For n=1, the above condition is true.<br><br>
+
+                                            If n=2<br><br>
+
+                                            2*2+3<=5*2<br><br>
+
+                                                7<=10<br><br>
+
+                                                    For n=2, the above condition is true.<br><br>
+                                                    We know that for any value of n, it will satisfy the above
+                                                    condition, i.e., 2n+3<=c.n. If the value of c is equal to 5, then it
+                                                        will satisfy the condition 2n+3<=c.n. We can take any value of n
+                                                        starting from 1, it will always satisfy. Therefore, we can say
+                                                        that for some constants c and for some constants n0, it will
+                                                        always satisfy 2n+3<=c.n. As it is satisfying the above
+                                                        condition, so f(n) is big oh of g(n) or we can say that f(n)
+                                                        grows linearly. Therefore, it concludes that c.g(n) is the upper
+                                                        bound of the f(n). It can be represented graphically as: <br>
+                                                        <br>
+                                                        <img src="data-structure-asymptotic-analysis2.png" width="300px"
+                                                            height="300px">
+
+                                                        <br><br>
+                                                        The idea of using big o notation is to give an upper bound of a
+                                                        particular function, and eventually it leads to give a
+                                                        worst-time complexity. It provides an assurance that a
+                                                        particular function does not behave suddenly as a quadratic or a
+                                                        cubic fashion, it just behaves in a linear manner in a
+                                                        worst-case.
+                                                        <br><br>
+                                                        <h2>Omega Notation (Ω)
+                                                        </h2><br><br>
+                                                        <ul>
+                                                            <li>It basically describes the best-case scenario which is
+                                                                opposite to the big o notation.</li><br>
+                                                            <li>It is the formal way to represent the lower bound of an
+                                                                algorithm's running time. It measures the best amount of
+                                                                time an algorithm can possibly take to complete or the
+                                                                best-case time complexity. </li><br>
+                                                            <li>It determines what is the fastest time that an algorithm
+                                                                can run. </li><br>
+                                                        </ul>
+                                                        <br><br>
+                                                        If we required that an algorithm takes at least certain amount
+                                                        of time without using an upper bound, we use big- Ω notation
+                                                        i.e. the Greek letter "omega". It is used to bound the growth of
+                                                        running time for large input size.
+
+                                                        <br><br>
+                                                        If <b>f(n)</b> and <b>g(n)</b> are the two functions defined for
+                                                        positive integers,<br><br>
+
+                                                        then <b>f(n) = Ω (g(n))</b> as<b> f(n) is Omega of g(n)</b> or
+                                                        f(n) is on the order of g(n)) if there exists constants c and no
+                                                        such that:<br><br>
+
+                                                        <b>f(n)>=c.g(n) for all n≥no and c>0
+                                                        </b><br><br>
+                                                        <b>Let's consider a simple example.
+                                                        </b><br><br>
+                                                        If f(n) = 2n+3, g(n) = n,<br><br>
+
+                                                        Is f(n)= <b>Ω</b> (g(n))?<br><br>
+
+                                                        It must satisfy the condition:<br><br>
+
+                                                        <b>f(n)>=c.g(n)
+                                                        </b><br><br>
+                                                        To check the above condition, we first replace f(n) by 2n+3 and
+                                                        g(n) by n.<br><br>
+
+                                                        <b>2n+3>=c*n</b><br><br>
+
+                                                        Suppose c=1 <br><br>
+
+                                                        <b>2n+3>=n</b> (This equation will be true for any value of n
+                                                        starting from 1).<br><br>
+
+                                                        Therefore, it is proved that g(n) is big omega of 2n+3
+                                                        function.<br><br>
+                                                        <img src="data-structure-asymptotic-analysis3.png" width="300px"
+                                                            height="300px">
+
+                                                        <br>
+                                                        <br>As we can see in the above figure that g(n) function is the
+                                                        lower bound of the f(n) function when the value of c is equal to
+                                                        1. Therefore, this notation gives the fastest running time. But,
+                                                        we are not more interested in finding the fastest running time,
+                                                        we are interested in calculating the worst-case scenarios
+                                                        because we want to check our algorithm for larger input that
+                                                        what is the worst time that it will take so that we can take
+                                                        further decision in the further process.
+                                                        <br><br>
+                                                        <h2>Theta Notation (θ)</h2><br><br>
+                                                        <div>
+                                                            <ul>
+                                                                <li>The theta notation mainly describes the average case
+                                                                    scenarios.</li><br>
+                                                                <li>It represents the realistic time complexity of an
+                                                                    algorithm. Every time, an algorithm does not perform
+                                                                    worst or best, in real-world problems, algorithms
+                                                                    mainly fluctuate between the worst-case and
+                                                                    best-case, and this gives us the average case of the
+                                                                    algorithm. </li><br>
+                                                                <li>Big theta is mainly used when the value of
+                                                                    worst-case and the best-case is same </li><br>
+                                                                <li>It is the formal way to express both the upper bound
+                                                                    and lower bound of an algorithm running time.</li>
+
+                                                            </ul>
+                                                        </div>
+                                                        Let's understand the big theta notation mathematically:<br><br>
+                                                        Let f(n) and g(n) be the functions of n where n is the steps
+                                                        required to execute the program then:<br><br>
+                                                        <b>f(n)= θg(n)</b><br><br>
+                                                        The above condition is satisfied only if when<br><br>
+                                                        <b>c1.g(n)<=f(n)<=c2.g(n)< /b><br><br>
+                                                                where the function is bounded by two limits, i.e., upper
+                                                                and lower limit, and f(n) comes in between. The
+                                                                condition f(n)= θg(n) will be true if and only if
+                                                                c1.g(n) is less than or equal to f(n) and c2.g(n) is
+                                                                greater than or equal to f(n). The graphical
+                                                                representation of theta notation is given below:
+                                                                <br><br>
+
+                                                                <img src="data-structure-asymptotic-analysis4.png"
+                                                                    width="300px" height="300px">
+                                                                <br><br>
+                                                                Let's consider the same example where<br><br>
+                                                                f(n)=2n+3<br><br>
+                                                                g(n)=n<br><br>
+                                                                As c1.g(n) should be less than f(n) so c1 has to be 1
+                                                                whereas c2.g(n) should be greater than f(n) so c2 is
+                                                                equal to 5. The c1.g(n) is the lower limit of the of the
+                                                                f(n) while c2.g(n) is the upper limit of the f(n).
+                                                                <br><br>
+                                                                c1.g(n)<=f(n)<=c2.g(n)<br><br>
+
+                                                                    Replace g(n) by n and f(n) by 2n+3<br><br>
+
+                                                                    c1.n <=2n+3<=c2.n<br><br>
+
+                                                                        if c1=1, c2=2, n=1<br><br>
+
+                                                                        1*1 <=2*1+3 <=2*1<br><br>
+
+                                                                            1 <= 5 <=2 // for n=1, it satisfies the
+                                                                                condition c1.g(n)<=f(n)<=c2.g(n)<br><br>
+
+                                                                                If n=2<br><br>
+                                                                                1*2<=2*2+3<=2*2<br><br>
+
+                                                                                    2<=7<=4 // for n=2, it satisfies the
+                                                                                        condition
+                                                                                        c1.g(n)<=f(n)<=c2.g(n)<br><br>
+
+                                                                                        Therefore, we can say that for
+                                                                                        any value of n, it satisfies the
+                                                                                        condition c1.g(n)
+                                                                                        <=f(n)<=c2.g(n). Hence, it is
+                                                                                            proved that f(n) is big
+                                                                                            theta of g(n). So, this is
+                                                                                            the average-case scenario
+                                                                                            which provides the realistic
+                                                                                            time complexity. <br><br>
+            </div>
+            <button class="button button2">
+                <a href="ds_introduction.html">PREV</a></button>
+        <button class=" button button1">
+                    <a href="ds_Pointer.html">NEXT</a></button>
+
+        </div>
+    </div>
+      
+<footer>
+    <div id="footer">
+        <div class="inner-footer">
+            <div class="footer-items">
+    <h3>About DSC</h3>
+    <p>codesyouth is platform used for Multinational company recruitment process and
+        brief history about that and also about<br>seminar topic for computer science
+        student.Codesyouth is a project developing<br>under Developer student club.</p>
+</div>
+<div class="footer-items">
+    <h3>NOTS</h3>
+    <div class="border"></div>
+    <ul>
+        <a href="https://www.javatpoint.com/html-tutorial">HTML</a>
+        <br>
+            <a href="https://www.javatpoint.com/python-tutorial">PYTHON</a>
+          <br>
+            <a href="https://www.javatpoint.com/java-tutorial">java</a>
+          <br>
+          <a href="https://www.javatpoint.com/c-programming-language-tutorial">c language</a>
+          <br>
+          <a href="https://www.javatpoint.com/cpp-tutorial">C++</a>
+          <br>
+          <a href="https://www.javatpoint.com/c-sharp-tutorial">C#</a>
+          
+    </ul>
+</div>
+<div class="footer-items">
+    <h3>Contact Us</h3>
+    <div class="border"></div>
+    <a href="https://www.facebook.com/javatpoint"><li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+    <img src="facebook.png"width="35px"height="35px"></a>
+    <a href="https://www.javatpoint.com/instagram-algorithm"><li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+    <img src="instagram.webp"width="35px"height="35px"></a>
+    <a href="https://twitter.com/pagejavatpoint"><li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+        <img src="twitter.png"width="35px"height="35px"></a>
+        <a href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><li><i class="fa fa-youtube" aria-hidden="true"></i></li>
+        <img src="youtube.png"width="35px"height="35px"></a>
+    </div>
+</div>
+
+</div>
+<div class="footer-bottom">
+Copyright@codesyouth  2020. All rights reserved.
+</div>
+
+  
+</footer>
+     
+
+</body>
+
+</html>
